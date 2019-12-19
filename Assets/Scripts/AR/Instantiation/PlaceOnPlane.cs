@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -16,6 +17,9 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
+
+    [SerializeField]
+    private Slider scaleSlider;
 
     /// <summary>
     /// The prefab to instantiate on touch.
@@ -34,6 +38,12 @@ public class PlaceOnPlane : MonoBehaviour
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
+        scaleSlider.onValueChanged.AddListener (delegate {HandleSliderMoved(); });
+    }
+
+    private void HandleSliderMoved()
+    {
+        spawnedObject.transform.localScale = Vector3.one * scaleSlider.value;
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)

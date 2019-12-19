@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
@@ -9,12 +10,12 @@ public class LightEstimationUI : MonoBehaviour
 {
     [Tooltip("The UI Text element used to display the estimated brightness in the physical environment.")]
     [SerializeField]
-    Text m_BrightnessText;
+    TextMeshProUGUI m_BrightnessText;
 
     /// <summary>
     /// The UI Text element used to display the estimated brightness value.
     /// </summary>
-    public Text brightnessText
+    public TextMeshProUGUI brightnessText
     {
         get { return m_BrightnessText; }
         set { m_BrightnessText = brightnessText; }
@@ -22,12 +23,12 @@ public class LightEstimationUI : MonoBehaviour
 
     [Tooltip("The UI Text element used to display the estimated color temperature in the physical environment.")]
     [SerializeField]
-    Text m_ColorTemperatureText;
+    TextMeshProUGUI m_ColorTemperatureText;
 
     /// <summary>
     /// The UI Text element used to display the estimated color temperature in the scene.
     /// </summary>
-    public Text colorTemperatureText
+    public TextMeshProUGUI colorTemperatureText
     {
         get { return m_ColorTemperatureText; }
         set { m_ColorTemperatureText = value; }
@@ -35,12 +36,12 @@ public class LightEstimationUI : MonoBehaviour
 
     [Tooltip("The UI Text element used to display the estimated color correction value for the physical environment.")]
     [SerializeField]
-    Text m_ColorCorrectionText;
+    TextMeshProUGUI m_ColorCorrectionText;
 
     /// <summary>
     /// The UI Text element used to display the estimated color correction value for the scene.
     /// </summary>
-    public Text colorCorrectionText
+    public TextMeshProUGUI colorCorrectionText
     {
         get { return m_ColorCorrectionText; }
         set { m_ColorCorrectionText = value; }
@@ -58,7 +59,7 @@ public class LightEstimationUI : MonoBehaviour
         SetUIValue(m_LightEstimation.colorCorrection, colorCorrectionText);
     }
 
-    void SetUIValue<T>(T? displayValue, Text text) where T : struct
+    void SetUIValue<T>(T? displayValue, TextMeshProUGUI text) where T : struct
     {
         if (text != null)
             text.text = displayValue.HasValue ? displayValue.Value.ToString(): k_UnavailableText;
