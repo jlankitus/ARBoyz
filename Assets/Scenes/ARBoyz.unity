@@ -206,13 +206,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49631454}
-  m_LocalRotation: {x: 0.9506116, y: 0.045904975, z: 0.25471553, w: -0.17131971}
+  m_LocalRotation: {x: 0.9174972, y: -0.08092403, z: 0.24584259, w: 0.30201262}
   m_LocalPosition: {x: 86.6315, y: 14.88718, z: 17.662264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 200.432, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 143.56, y: -30, z: 0}
 --- !u!1 &230750413
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 230750413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 25, y: 10, z: 25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -396,13 +396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4941682ca206edb408f6abf56070d409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 0.5
-  mainSpeed: 10
-  shiftMultiplier: 2
-  ctrlMultiplier: 0.5
-  camSens: 0.35
-  lastMouse: {x: 968, y: 351, z: 0}
-  clickToMove: 1
 --- !u!1 &832713707
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8985ed87ff01c40dc98702813a8df234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlacedPrefab: {fileID: 1296831130728618, guid: f20895eed6814d54286b056ca6164075,
+  m_PlacedPrefab: {fileID: 2257041362915119901, guid: c247cabf8ea724bc7b56b785bf510195,
     type: 3}
 --- !u!114 &832713711
 MonoBehaviour:
